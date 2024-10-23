@@ -1,5 +1,5 @@
 {
-    "name": "webpack-config",
+    "name": "gallery",
     "version": "1.0.0",
     "description": "",
     "private": true,
@@ -11,15 +11,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Yeison0416/webpack-config.git"
+        "url": "git+https://github.com/Yeison0416/Gallery.git"
     },
-    "keywords": [],
-    "author": "Yeison Steven Sanchez Figueroa",
+    "author": "Yeison Sanchez",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Yeison0416/webpack-config/issues"
+        "url": "https://github.com/Yeison0416/Gallery/issues"
     },
-    "homepage": "https://github.com/Yeison0416/webpack-config#readme",
+    "homepage": "https://github.com/Yeison0416/Gallery#readme",
     "devDependencies": {
         "@babel/core": "^7.24.7",
         "@babel/eslint-parser": "^7.24.8",
