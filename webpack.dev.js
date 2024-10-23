@@ -24,7 +24,7 @@ module.exports = merge(commonConfig, {
                     },
                     {
                         loader: 'sass-loader',
-                        options: { sourceMap: true },
+                        options: { api: 'modern-compiler', sourceMap: true },
                     },
                 ],
             },
