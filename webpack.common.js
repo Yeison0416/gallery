@@ -42,8 +42,8 @@ module.exports = {
                 },
             },
             {
-                test: /\.html$/i,
-                loader: 'html-loader',
+                test: /\.hbs$/,
+                loader: 'handlebars-loader',
                 options: {
                     minimize: true,
                 },
