@@ -1,9 +1,17 @@
 import 'reset-css';
 import './index.scss';
-import handlebarsTest from './components/handlebars/handlebars-test';
+import { Gallery } from './components/gallery/gallery';
+import { data } from './data/data';
 
-function component() {
-    handlebarsTest(document.body);
+function app() {
+    return {
+        buildGallery() {
+            const rootElement = document.querySelector('#app-root');
+            const galleryObject = Gallery(data, rootElement);
+            galleryObject.createGallery();
+        },
+    };
 }
 
-component();
+const application = app();
+application.buildGallery();
