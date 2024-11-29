@@ -46,6 +46,14 @@ module.exports = {
                 loader: 'handlebars-loader',
                 options: {
                     minimize: true,
+                    partialDirs: [
+                        path.join(__dirname, 'src/components/gallery/gallery-content-renderer'),
+                        path.join(__dirname, 'src/components/gallery/gallery-navigation'),
+                        path.join(__dirname, 'src/components/picture/'),
+                        path.join(__dirname, 'src/components/descriptive-text/'),
+                        path.join(__dirname, 'src/components/header'),
+                        path.join(__dirname, 'src/components/descriptive-card'),
+                    ],
                 },
             },
         ],
