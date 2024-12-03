@@ -1,12 +1,16 @@
 <div class='gallery'>
-    <button class='gallery__arrow-button gallery__arrow-button--left'>
+    <button class='gallery__arrow-button gallery__arrow-button--left'
+        aria-label="{{buttons.buttonLeft.ariaLabel}}"
+        aria-hidden="{{buttons.buttonLeft.ariaHidden}}">
         <span></span>
     </button>
     <div class="gallery__content">
-        {{> gallery-content-renderer}}
+        {{> gallery-content-renderer galleryContent}}
         {{> gallery-navigation}}
     </div>
-    <button class='gallery__arrow-button gallery__arrow-button--right'>
+    <button class='gallery__arrow-button gallery__arrow-button--right'
+        aria-label="{{buttons.buttonRight.ariaLabel}}"
+        aria-hidden="{{buttons.buttonRight.ariaHidden}}">
         <span></span>
     </button>
 </div>
