@@ -1,9 +1,10 @@
-body {
-    background: black;
-    color: red;
-}
+@use './main';
 
-h1 {
-    color: #fff;
-    font-size: 24px;
+#app-root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
 }
