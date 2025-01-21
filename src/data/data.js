@@ -1,72 +1,85 @@
+import image1 from '../assets/gallery-images-assets/mobilecar.jpg';
+// import image1 from '../assets/gallery-images-assets/vanillaJsImage1.jpg';
+// import image3 from '../assets/gallery-images-assets/vanillaJsImage3.jpg';
+// import image4 from '../assets/gallery-images-assets/vanillaJsImage4.jpg';
+
+/* eslint-disable */
 export const data = {
     gallery: {
         type: 'gallery',
         headerData: {
             type: 'header',
-            title: 'title',
-            subtitle: 'subTitle',
+            title: 'Images Gallerys',
             configuration: {
-                titleAligment: 'titleAligment',
-                mobileTitleAligment: 'mobileTitleAligment',
-                subtitleAligment: 'subtitle',
-                mobilesubtitleAligment: 'mobileTitleAligment',
+                titleAligment: 'center',
+                mobileTitleAligment: 'center',
+                subtitleAligment: 'center',
+                mobilesubtitleAligment: 'center',
             },
         },
         galleryContent: {
             type: 'images',
             content: [
                 {
-                    type: 'image',
                     isImageActive: true,
                     image: {
+                        type: 'image',
                         media: {
-                            desktop: 'imageDesktop1.jpg',
-                            mobile: 'imageMobile1.jpg',
+                            desktop: image1,
+                            mobile: image1,
+                            alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
+                            ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
                         },
                         configuration: {
                             slideTimer: 30,
                         },
                     },
                 },
-                {
-                    type: 'image',
-                    isImageActive: true,
-                    image: {
-                        media: {
-                            desktop: 'imageDesktop1.jpg',
-                            mobile: 'imageMobile1.jpg',
-                        },
-                        configuration: {
-                            slideTimer: 30,
-                        },
-                    },
-                },
-                {
-                    type: 'image',
-                    isImageActive: true,
-                    image: {
-                        media: {
-                            desktop: 'imageDesktop1.jpg',
-                            mobile: 'imageMobile1.jpg',
-                        },
-                        configuration: {
-                            slideTimer: 30,
-                        },
-                    },
-                },
-                {
-                    type: 'image',
-                    isImageActive: true,
-                    image: {
-                        media: {
-                            desktop: 'imageDesktop1.jpg',
-                            mobile: 'imageMobile1.jpg',
-                        },
-                        configuration: {
-                            slideTimer: 30,
-                        },
-                    },
-                },
+                // {
+                //     isImageActive: true,
+                //     image: {
+                //         type: 'image',
+                //         media: {
+                //             desktop: image2,
+                //             mobile: image2,
+                //             alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
+                //             ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
+                //         },
+                //         configuration: {
+                //             slideTimer: 30,
+                //         },
+                //     },
+                // },
+                // {
+                //     isImageActive: true,
+                //     image: {
+                //         type: 'image',
+                //         media: {
+                //             desktop: image3,
+                //             mobile: image3,
+                //             alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
+                //             ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
+                //         },
+                //         configuration: {
+                //             slideTimer: 30,
+                //         },
+                //     },
+                // },
+                // {
+                //     isImageActive: true,
+                //     image: {
+                //         type: 'image',
+                //         media: {
+                //             desktop: image4,
+                //             mobile: image4,
+                //             alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
+                //             ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
+                //         },
+                //         configuration: {
+                //             slideTimer: 30,
+                //         },
+                //     },
+                // },
             ],
             // content: [
             //     {
