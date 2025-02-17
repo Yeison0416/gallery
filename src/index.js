@@ -1,5 +1,6 @@
 import 'reset-css';
 import './index.scss';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Gallery } from './components/gallery/gallery';
 import { data } from './data/data';
 
