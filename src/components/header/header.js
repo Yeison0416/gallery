@@ -1,4 +1,4 @@
-export function Header() {
+export function Header({ headerData }) {
     const state = {
         type: 'header',
     };

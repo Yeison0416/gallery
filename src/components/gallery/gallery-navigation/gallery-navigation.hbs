@@ -1,7 +1,9 @@
 <nav class='gallery-navigation'>
     <ul class='gallery-navigation__container-buttons'>
-        <li class='gallery-navigation__item-button'>
-            <button class='gallery-navigation__button'></button>
-        </li>
+        {{#each content}}
+            <button class='gallery-navigation__button'>
+                <li class='gallery-navigation__item-button fa-solid fa-circle'></li>
+            </button>
+        {{/each}}
     </ul>
 </nav>
