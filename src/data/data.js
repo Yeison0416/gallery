@@ -185,12 +185,12 @@ export const data = {
             type: 'button',
             buttonLeft: {
                 ariaLabel: 'Previous image',
-                ariaHidden: 'true',
+                ariaHidden: 'false',
                 icon: '&larr;',
             },
             buttonRight: {
                 ariaLabel: 'Next image',
-                ariaHidden: 'true',
+                ariaHidden: 'false',
                 icon: '&rarr;',
             },
         },
