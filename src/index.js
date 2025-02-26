@@ -8,8 +8,8 @@ function app() {
     return {
         buildGallery() {
             const rootElement = document.querySelector('#app-root');
-            const galleryObject = Gallery();
-            galleryObject.init(data.gallery, rootElement, { currentSlide: 0, maxSlides: data.gallery.galleryContent.content.length });
+            const galleryObject = Gallery(data.gallery, rootElement);
+            galleryObject.init();
         },
     };
 }
