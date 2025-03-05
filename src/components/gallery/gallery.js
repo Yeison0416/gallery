@@ -4,6 +4,9 @@ import { GalleryNavigation } from './gallery-navigation/gallery-navigation';
 import { galleryState$ } from './gallery-state/gallery-state';
 
 export function Gallery(data, node) {
+    const galleryTemplate = template(data);
+    node.innerHTML = galleryTemplate;
+
     const maxSlides = data.galleryContent.content.length;
     let galleryState = { currentSlide: 0 };
 
@@ -38,8 +41,6 @@ export function Gallery(data, node) {
     const state = {
         type: 'galley',
         init() {
-            const galleryTemplate = template(data);
-            node.innerHTML = galleryTemplate;
             setEvents();
             const galleryContentRenderer = GalleryContentRenderer();
             galleryContentRenderer.init();

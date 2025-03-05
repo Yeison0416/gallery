@@ -6,7 +6,7 @@ export function GalleryNavigation() {
         buttons: Array.from(document.querySelectorAll('.gallery-navigation__button')),
     };
 
-    const setInitNavigationButtonsBehavior = () => {
+    const setInitNavigationButtonsState = () => {
         navigationButtons.buttons[0].classList.add('gallery-navigation__button--active');
     };
 
@@ -19,7 +19,7 @@ export function GalleryNavigation() {
     const state = {
         type: 'gallery-navigation',
         init() {
-            setInitNavigationButtonsBehavior();
+            setInitNavigationButtonsState();
             navigationTransition();
         },
     };

@@ -6,7 +6,7 @@ export function GalleryContentRenderer() {
         slides: Array.from(document.querySelectorAll('.gallery-content__item')),
     };
 
-    const setInitgalleryItemsBehavior = () => {
+    const setInitgalleryItemsState = () => {
         galleryItems.slides[0].classList.add('gallery-content__item--active');
     };
 
@@ -19,7 +19,7 @@ export function GalleryContentRenderer() {
     const state = {
         type: 'gallery-content-renderer',
         init() {
-            setInitgalleryItemsBehavior();
+            setInitgalleryItemsState();
             slideTransition();
         },
     };
