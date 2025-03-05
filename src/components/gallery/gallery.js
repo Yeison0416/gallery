@@ -18,15 +18,11 @@ export function Gallery(data, node) {
     const handleNextSlide = (nextSlide) => {
         galleryState = nextSlide();
         galleryState$.update(galleryState);
-
-        console.log(galleryState);
     };
 
     const handlePrevSlide = (previousSlide) => {
         galleryState = previousSlide();
         galleryState$.update(galleryState);
-
-        console.log(galleryState);
     };
 
     const nextSlide = () => ({

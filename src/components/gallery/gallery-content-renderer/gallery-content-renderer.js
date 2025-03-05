@@ -1,21 +1,25 @@
 import { galleryState$ } from '../gallery-state/gallery-state';
+import { galleryTransition } from '../gallery-transition/gallery-transition';
 
 export function GalleryContentRenderer() {
-    const setDefaultBehavior = () => {
-        const galleryITem = document.querySelector('.gallery-content__item');
-        galleryITem.classList.add('gallery-content__item--active');
+    const galleryItems = {
+        slides: Array.from(document.querySelectorAll('.gallery-content__item')),
+    };
+
+    const setInitgalleryItemsBehavior = () => {
+        galleryItems.slides[0].classList.add('gallery-content__item--active');
     };
 
     const slideTransition = () => {
         galleryState$.subscribe((state) => {
-            console.log(state.currentSlide);
+            galleryTransition(state, galleryItems.slides, 'gallery-content__item--active');
         });
     };
 
     const state = {
         type: 'gallery-content-renderer',
         init() {
-            setDefaultBehavior();
+            setInitgalleryItemsBehavior();
             slideTransition();
         },
     };

@@ -1,7 +1,8 @@
-import image1 from '../assets/gallery-images-assets/mobilecar.jpg';
-import image2 from '../assets/gallery-images-assets/vanillaJsImage1.jpg';
-import image3 from '../assets/gallery-images-assets/vanillaJsImage3.jpg';
-import image4 from '../assets/gallery-images-assets/vanillaJsImage4.jpg';
+import image1 from '../assets/gallery-images-assets/mobilecar1.jpg';
+import image2 from '../assets/gallery-images-assets/mobilecar2.jpg';
+import image3 from '../assets/gallery-images-assets/mobilecar3.jpg';
+import image4 from '../assets/gallery-images-assets/mobilecar4.jpg';
+import image5 from '../assets/gallery-images-assets/mobilecar5.jpg';
 
 /* eslint-disable */
 export const data = {
@@ -73,6 +74,21 @@ export const data = {
                         media: {
                             desktop: image4,
                             mobile: image4,
+                            alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
+                            ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
+                        },
+                        configuration: {
+                            slideTimer: 30,
+                        },
+                    },
+                },
+                {
+                    isImageActive: true,
+                    image: {
+                        type: 'image',
+                        media: {
+                            desktop: image5,
+                            mobile: image5,
                             alt: 'Mockup of a simple image gallery layout featuring placeholder images, navigation arrows, and index dots for practicing web development',
                             ariaLabel: 'Image gallery mockup with navigation arrows and index dots',
                         },

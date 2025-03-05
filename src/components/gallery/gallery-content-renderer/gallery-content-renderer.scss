@@ -1,8 +1,14 @@
+@use './../../../mixins/fade-in' as *;
+
+$transition-time: 1s;
+
 .gallery-content {
     &__item {
         display: none;
 
         &--active {
+            @include fade-in;
+
             display: block;
         }
     }
