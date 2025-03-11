@@ -9,13 +9,28 @@ export function Gallery(data, node) {
 
     const maxSlides = data.galleryContent.content.length;
     let galleryState = { currentSlide: 0 };
+    const galleryElements = {
+        rightButton: document.querySelector('.gallery__arrow-button--right'),
+        leftButton: document.querySelector('.gallery__arrow-button--left'),
+    };
 
     const setEvents = () => {
-        const rightButton = document.querySelector('.gallery__arrow-button--right');
-        const leftEvents = document.querySelector('.gallery__arrow-button--left');
+        galleryElements.rightButton.addEventListener('click', () => handleNextSlide(nextSlide));
+        galleryElements.leftButton.addEventListener('click', () => handlePrevSlide(previousSlide));
 
-        rightButton.addEventListener('click', () => handleNextSlide(nextSlide));
-        leftEvents.addEventListener('click', () => handlePrevSlide(previousSlide));
+        document.addEventListener('keyup', (event) => keyupHandler(event));
+    };
+
+    const keyupHandler = (event) => {
+        if (event.key === 'ArrowRight') {
+            handleNextSlide(nextSlide);
+            galleryElements.rightButton.focus();
+        }
+
+        if (event.key === 'ArrowLeft') {
+            handlePrevSlide(previousSlide);
+            galleryElements.leftButton.focus();
+        }
     };
 
     const handleNextSlide = (nextSlide) => {

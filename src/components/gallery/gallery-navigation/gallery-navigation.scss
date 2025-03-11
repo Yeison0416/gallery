@@ -21,8 +21,13 @@
             opacity: 1;
 
             & > li {
-                color: white;
+                font-size: 16px;
             }
         }
+    }
+
+    &__item-button {
+        color: white;
+        font-size: 12px;
     }
 }
