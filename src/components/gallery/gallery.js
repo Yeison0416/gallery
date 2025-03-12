@@ -53,10 +53,17 @@ export function Gallery(data, node) {
         currentSlide: (galleryState.currentSlide - 1 + maxSlides) % maxSlides,
     });
 
+    const updateGalleryState = () => {
+        galleryState$.subscribe((state) => {
+            galleryState = state;
+        });
+    };
+
     const state = {
         type: 'galley',
         init() {
             setEvents();
+            updateGalleryState();
             const galleryContentRenderer = GalleryContentRenderer();
             galleryContentRenderer.init();
             const galleryNavigation = GalleryNavigation();
