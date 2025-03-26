@@ -1,7 +1,6 @@
 import { galleryState$ } from '../gallery-state/gallery-state';
-import { galleryTransition } from '../gallery-transition/gallery-transition';
 
-export function GalleryNavigation() {
+export function GalleryNavigation(galleryTransition) {
     const galleryNavigationElements = {
         buttons: Array.from(document.querySelectorAll('.gallery-navigation__button')),
         galleryNavigation: document.querySelector('.gallery-navigation'),

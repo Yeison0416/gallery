@@ -2,6 +2,7 @@ import template from './galley.hbs';
 import { GalleryContentRenderer } from './gallery-content-renderer/gallery-content-renderer';
 import { GalleryNavigation } from './gallery-navigation/gallery-navigation';
 import { galleryState$ } from './gallery-state/gallery-state';
+import { galleryTransition } from './gallery-transition/gallery-transition';
 
 export function Gallery(data, node) {
     const galleryTemplate = template(data);
@@ -64,9 +65,9 @@ export function Gallery(data, node) {
         init() {
             setEvents();
             updateGalleryState();
-            const galleryContentRenderer = GalleryContentRenderer();
+            const galleryContentRenderer = GalleryContentRenderer(galleryTransition);
             galleryContentRenderer.init();
-            const galleryNavigation = GalleryNavigation();
+            const galleryNavigation = GalleryNavigation(galleryTransition);
             galleryNavigation.init();
         },
     };

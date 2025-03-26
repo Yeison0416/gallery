@@ -1,7 +1,6 @@
 import { galleryState$ } from '../gallery-state/gallery-state';
-import { galleryTransition } from '../gallery-transition/gallery-transition';
 
-export function GalleryContentRenderer() {
+export function GalleryContentRenderer(galleryTransition) {
     const galleryContentRendererElements = {
         slides: Array.from(document.querySelectorAll('.gallery-content__item')),
     };
