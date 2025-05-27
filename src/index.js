@@ -9,7 +9,7 @@ function app() {
         buildGallery() {
             const rootElement = document.querySelector('#app-root');
             const galleryObject = Gallery(data.gallery, rootElement);
-            galleryObject.createGallery();
+            galleryObject.init();
         },
     };
 }

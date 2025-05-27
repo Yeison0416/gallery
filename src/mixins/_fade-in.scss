@@ -1,0 +1,16 @@
+$start-opacity: 0.3;
+$end-opacity: 1;
+
+@mixin fade-in($duration: 1s) {
+    animation: fade-in $duration ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: #{$start-opacity};
+    }
+
+    to {
+        opacity: #{$end-opacity};
+    }
+}
