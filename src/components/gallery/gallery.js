@@ -8,7 +8,7 @@ export function Gallery(data, node) {
     const galleryTemplate = template(data);
     node.innerHTML = galleryTemplate;
 
-    const maxSlides = data.galleryContent.content.length;
+    const maxSlides = data.galleryContent.items.length;
     let galleryState = { currentSlide: 0 };
     const galleryElements = {
         rightButton: document.querySelector('.gallery__arrow-button--right'),

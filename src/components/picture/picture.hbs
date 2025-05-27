@@ -1,5 +1,14 @@
 <div class='picture'>
     <picture>
-        <img class='picture__image' src='{{media.mobile}}' alt='{{media.alt}}' aria-label='{{media.ariaLabel}}' />
+        <!-- Small screens: mobile first -->
+        <source media='{{sources.mobile.media}}' sizes='{{sources.mobile.sizes}}' srcset='{{sources.mobile.srcset}}' />
+        <!-- Medium screens: tablets -->
+        <source media='{{sources.tablet.media}}' sizes='{{sources.tablet.sizes}}' srcset='{{sources.tablet.srcset}}' />
+        <!-- Small laptops: desktop-small -->
+        <source media='{{sources.desktopSmall.media}}' sizes='{{sources.desktopSmall.sizes}}' srcset='{{sources.desktopSmall.srcset}}' />
+        <!-- Large screens: desktop-large and beyond -->
+        <source media='{{sources.desktopLarge.media}}' sizes='{{sources.desktopLarge.sizes}}' srcset='{{sources.desktopLarge.srcset}}' />
+
+        <img class='picture__image' src='{{sources.default.url}}' alt='{{alt}}' aria-label='{{ariaLabel}}' />
     </picture>
 </div>

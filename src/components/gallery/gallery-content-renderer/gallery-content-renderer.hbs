@@ -1,16 +1,21 @@
 <ul class='gallery-content' role='tablist'>
-    {{#each content}}
-        <li class='gallery-content__item' role='tab'>
-            {{#if isImageActive }}
+    {{#if isImageType }}
+        {{#each items}}
+            <li class='gallery-content__item' role='tab'>
                 <div class='gallery-content__picture'>
-                    {{> picture image}}
+                    {{> picture mediaItem}}
                 </div>
-            {{/if}}
-            {{#if isDescriptiveTextActive }}
+            </li>
+        {{/each}}
+    {{/if}}
+
+    {{#if isDescriptiveTextType }}
+        {{#each items}}
+            <li class='gallery-content__item' role='tab'>
                 <div class='gallery-content__descriptive-card'>
-                    {{> descriptive-card}}
+                    {{> descriptive-card mediaItem}}
                 </div>
-            {{/if}}
-        </li>
-    {{/each}}
+            </li>
+        {{/each}}
+    {{/if}}
 </ul>
